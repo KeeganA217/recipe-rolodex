@@ -1,13 +1,38 @@
 import React from "react";
-import RecipeContext from "../../context/recipe/recipeContext";
 
-const RecipeItem = () => {
-  const recipeContext = useContext(RecipeContext);
-  const { recipes } = recipeContext;
-
-  return <div>
-      <h3>{recipes.}</h3>
-  </div>;
+const RecipeItem = ({ title, calories, image, ingredients, link, risks }) => {
+  return (
+    <div className="recipe-card">
+      <div className="upper">
+        <div className="image">
+          <img src={image} alt="Loading..." className="image" />
+        </div>
+        <div className="info">
+          {" "}
+          <h4>{title}</h4>
+          <p>
+            <span>{calories}</span> Total Calories
+          </p>
+          {risks.map((risk) => (
+            <ul>
+              <li>{risk}</li>
+            </ul>
+          ))}
+        </div>
+      </div>
+      <div className="lower">
+        <p>Ingredients</p>
+        {ingredients.map((ingredient) => (
+          <ul>
+            <li>{ingredient}</li>
+          </ul>
+        ))}
+      </div>
+      <button>
+        <a href={link}>Explore Full Recipe</a>
+      </button>
+    </div>
+  );
 };
 
 export default RecipeItem;

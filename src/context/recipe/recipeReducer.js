@@ -1,4 +1,4 @@
-import { SEARCH_RECIPES, SET_LOADING } from "../Types";
+import { SEARCH_RECIPES, SET_LOADING, CLEAR_RECIPES } from "../Types";
 
 export default (state, action) => {
   switch (action.type) {
@@ -12,6 +12,12 @@ export default (state, action) => {
       return {
         ...state,
         loading: true,
+      };
+    case CLEAR_RECIPES:
+      return {
+        ...state,
+        recipes: [],
+        loading: false,
       };
     default:
       return state;

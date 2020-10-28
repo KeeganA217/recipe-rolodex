@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav
-      className="navbar navbar-light mb-3 navbar-expand-sm"
-      style={{ background: "#FBFFBC" }}
-    >
+    <nav className="navbar navbar-light mb-3 navbar-expand-sm">
       <h3>
-        <i className="fas fa-utensils"></i>
-        <span> </span>The Recipe Rolodex
+        <span className="icon">
+          <i className="fas fa-utensils"></i>
+        </span>
+        The Recipe Rolodex
       </h3>
       <ul className="navbar-nav mr-5 ml-auto">
         <li className="nav-item float-right">
