@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import RecipeContext from "../../context/recipe/recipeContext";
 import RecipeItem from "./RecipeItem";
-import Spinner from "../Spinner";
+import Spinner from "../components/Spinner";
 import { v4 as uuid } from "uuid";
 
 const Recipes = () => {

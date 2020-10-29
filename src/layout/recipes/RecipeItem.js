@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuid } from "uuid";
 
 const RecipeItem = ({ title, calories, image, ingredients, link, risks }) => {
   return (
@@ -14,7 +15,7 @@ const RecipeItem = ({ title, calories, image, ingredients, link, risks }) => {
             <span>{calories}</span> Total Calories
           </p>
           {risks.map((risk) => (
-            <ul>
+            <ul key={uuid()}>
               <li>{risk}</li>
             </ul>
           ))}
@@ -23,7 +24,7 @@ const RecipeItem = ({ title, calories, image, ingredients, link, risks }) => {
       <div className="lower">
         <p>Ingredients</p>
         {ingredients.map((ingredient) => (
-          <ul>
+          <ul key={uuid()}>
             <li>{ingredient}</li>
           </ul>
         ))}

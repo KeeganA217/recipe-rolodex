@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
-import RecipeContext from "../context/recipe/recipeContext";
+import RecipeContext from "../../context/recipe/recipeContext";
 
 const Search = () => {
   const recipeContext = useContext(RecipeContext);
 
-  const { recipes, clearRecipes } = recipeContext;
+  const { recipes, clearRecipes, searchRecipes } = recipeContext;
 
   const [text, setText] = useState("");
 
@@ -12,7 +12,7 @@ const Search = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    recipeContext.searchRecipes(text);
+    searchRecipes(text);
     setText("");
   };
 
@@ -26,6 +26,7 @@ const Search = () => {
           placeholder="Find A Recipe..."
           className="search mx-auto form-control"
           onChange={onChange}
+          required
         />
         <input
           type="submit"

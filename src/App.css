@@ -51,15 +51,15 @@ nav {
   grid-template-columns: auto auto;
   grid-gap: 1.5rem;
   height: 220px;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .recipe-card {
   padding: 15px;
-  box-shadow: 5px 6px 20px -1px rgba(0, 0, 0, 0.58);
+  box-shadow: 5px 6px 15px -1px rgba(0, 0, 0, 0.45);
   background-color: #adcbe3;
   position: relative;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .upper {
@@ -80,7 +80,7 @@ nav {
   padding: 0;
 }
 
-img {
+.recipe-card img {
   height: 160px;
   width: 160px;
   box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.32);
@@ -119,12 +119,13 @@ li {
   border: none;
   background-color: #2a4d69;
   width: 150px;
-  border-radius: 2px;
+  border-radius: 3px;
   margin: auto;
   margin-top: 15px;
   padding: 8px 0;
   position: absolute;
   bottom: 10px;
+  box-shadow: 5px 4px 17px 0px rgba(0, 0, 0, 0.39);
   right: 10px;
 }
 
@@ -143,4 +144,7 @@ a:hover {
   text-decoration: none;
   color: white;
   font-style: italic;
+}
+
+@media (max-width: 768px) {
 }

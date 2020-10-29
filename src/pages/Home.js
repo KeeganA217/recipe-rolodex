@@ -1,5 +1,5 @@
 import React from "react";
-import Search from "../layout/Search";
+import Search from "../layout/components/Search";
 import Recipes from "../layout/recipes/Recipes";
 
 const Home = () => {

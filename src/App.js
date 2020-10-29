@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../src/layout/Navbar";
+import Navbar from "../src/layout/components/Navbar";
 import home from "../src/pages/Home";
 import about from "../src/pages/About";
 import RecipeState from "../src/context/recipe/RecipeState";
@@ -10,7 +10,7 @@ function App() {
   return (
     <RecipeState>
       <Router>
-        <div className="App ">
+        <div className="App">
           <Navbar />
           <div className="container">
             <Switch>
