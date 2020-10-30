@@ -30,7 +30,9 @@ const RecipeItem = ({ title, calories, image, ingredients, link, risks }) => {
         ))}
       </div>
       <button>
-        <a href={link}>Explore Full Recipe</a>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          Explore Full Recipe
+        </a>
       </button>
     </div>
   );

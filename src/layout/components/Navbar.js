@@ -8,16 +8,16 @@ const Navbar = () => {
         <span className="icon">
           <i className="fas fa-utensils"></i>
         </span>
-        The Recipe Rolodex
+        <span className="title">The Recipe Rolodex</span>
       </h3>
-      <ul className="navbar-nav mr-5 ml-auto">
-        <li className="nav-item float-right">
-          <Link className="nav-link" to="/">
+      <ul className="mr-5 ml-auto">
+        <li className="item float-right">
+          <Link className="link" to="/">
             Home
           </Link>
         </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/about">
+        <li className="item">
+          <Link className="link" to="/about">
             About
           </Link>
         </li>

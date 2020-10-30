@@ -9,10 +9,42 @@
 nav {
   height: 3rem;
   background: #63ace5;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-top: 35px;
+}
+
+.link {
+  color: #606366;
+  padding: 5px 8px;
 }
 
 .icon {
   padding-right: 12px;
+}
+
+.about {
+  text-align: center;
+}
+
+.about h3 {
+  padding: 3rem 0 2rem 0;
+}
+
+.about i {
+  padding-left: 20px;
+  color: #ff7878;
+}
+
+.about p {
+  line-height: 1.7rem;
+  font-size: 18px;
+  border-top: 3px solid black;
+  padding-top: 2rem;
 }
 
 .search:focus {
@@ -146,5 +178,52 @@ a:hover {
   font-style: italic;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
+  .title {
+    font-size: 20px;
+  }
+
+  nav {
+    align-content: center;
+  }
+
+  nav ul {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .items {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1.5rem;
+    height: 220px;
+    margin-bottom: 25px;
+  }
+
+  .upper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .upper ul {
+    text-align: center;
+  }
+
+  .info {
+    margin-bottom: 45px;
+  }
+
+  .recipe-card img {
+    margin-bottom: 10px;
+  }
+
+  .lower {
+    display: none;
+  }
+  .recipe-card button {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
 }
