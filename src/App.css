@@ -78,6 +78,25 @@ nav ul {
   background-color: #e65050;
 }
 
+.alternate {
+  border: 2px solid #606366;
+  border-radius: 4px;
+  height: 300px;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.alternate i {
+  transform: rotate(25deg);
+  color: #ff7878;
+  display: block;
+  font-size: 45px;
+  padding-bottom: 4rem;
+}
+
 .items {
   display: grid;
   grid-template-columns: auto auto;
@@ -117,7 +136,6 @@ nav ul {
   width: 160px;
   box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.32);
   border-radius: 2px;
-  border: 1px solid #021a40;
 }
 
 .lower {

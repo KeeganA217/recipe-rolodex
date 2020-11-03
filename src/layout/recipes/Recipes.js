@@ -12,21 +12,30 @@ const Recipes = () => {
   if (loading) {
     return <Spinner />;
   } else {
-    return (
-      <div className="items">
-        {recipes.map((recipe) => (
-          <RecipeItem
-            title={recipe.recipe.label}
-            image={recipe.recipe.image}
-            calories={Math.floor(recipe.recipe.calories)}
-            ingredients={recipe.recipe.ingredientLines}
-            link={recipe.recipe.url}
-            risks={recipe.recipe.healthLabels}
-            key={uuid()}
-          />
-        ))}
-      </div>
-    );
+    if (recipes.length === 0) {
+      return (
+        <div className="alternate">
+          <i className="fas fa-glasses"></i>
+          <h3>Please search for an ingredient or recipe to get started...</h3>
+        </div>
+      );
+    } else {
+      return (
+        <div className="items">
+          {recipes.map((recipe) => (
+            <RecipeItem
+              title={recipe.recipe.label}
+              image={recipe.recipe.image}
+              calories={Math.floor(recipe.recipe.calories)}
+              ingredients={recipe.recipe.ingredientLines}
+              link={recipe.recipe.url}
+              risks={recipe.recipe.healthLabels}
+              key={uuid()}
+            />
+          ))}
+        </div>
+      );
+    }
   }
 };
 
