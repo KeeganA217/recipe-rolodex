@@ -3,48 +3,52 @@
 }
 
 .app {
-  background: #e7eff6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-container {
+  max-width: 80%;
+  margin: auto;
+  min-height: calc(100vh - 8rem);
+}
+
+.items {
+  flex-grow: 1;
 }
 
 nav {
-  height: 3rem;
+  height: 3.5rem;
   background: #63ace5;
   width: 100%;
-}
-
-nav ul {
+  margin-bottom: 1rem;
   display: flex;
-  list-style: none;
-  margin-top: 35px;
+  align-content: center;
+  font-style: italic;
 }
 
-.link {
-  color: #606366;
-  padding: 5px 8px;
+nav h3 {
+  padding-top: 5px;
+  font-family: "Amatic SC", cursive;
 }
 
-.icon {
-  padding-right: 12px;
+nav i {
+  font-size: 35px;
+  color: #fff;
 }
 
-.about {
-  text-align: center;
+.footer {
+  background-color: #63ace5;
+  display: flex;
+  justify-content: center;
+  height: 3.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
-.about h3 {
-  padding: 3rem 0 2rem 0;
-}
-
-.about i {
-  padding-left: 20px;
-  color: #ff7878;
-}
-
-.about p {
-  line-height: 1.7rem;
-  font-size: 18px;
-  border-top: 3px solid black;
-  padding-top: 2rem;
+.version {
+  color: #fff;
 }
 
 .search:focus {
@@ -87,6 +91,11 @@ nav ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.alternate h4 {
+  font-weight: 400;
 }
 
 .alternate i {
@@ -94,20 +103,19 @@ nav ul {
   color: #ff7878;
   display: block;
   font-size: 45px;
-  padding-bottom: 4rem;
+  padding: 2rem;
 }
 
 .items {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1.5rem;
-  height: 220px;
-  margin-bottom: 25px;
+  margin-bottom: 2rem;
 }
 
 .recipe-card {
   padding: 15px;
-  box-shadow: 5px 6px 15px -1px rgba(0, 0, 0, 0.45);
+  box-shadow: 5px 6px 15px -1px rgba(0, 0, 0, 0.25);
   background-color: #adcbe3;
   position: relative;
   border-radius: 3px;
@@ -124,7 +132,7 @@ nav ul {
 }
 
 .upper ul {
-  list-style-type: circle;
+  list-style-type: dot;
   list-style-position: inside;
   text-align: left;
   margin: 0;
@@ -134,14 +142,13 @@ nav ul {
 .recipe-card img {
   height: 160px;
   width: 160px;
-  box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.32);
-  border-radius: 2px;
+  box-shadow: 5px 5px 18px 0px rgba(0, 0, 0, 0.25);
 }
 
 .lower {
   margin-top: 15px;
   margin-bottom: 15px;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .lower p {
@@ -205,16 +212,19 @@ a:hover {
     align-content: center;
   }
 
-  nav ul {
-    display: block;
-    margin-top: 15px;
+  .alternate {
+    text-align: center;
+  }
+
+  .alternate h3,
+  .alternate h4 {
+    font-size: 20px;
   }
 
   .items {
     display: grid;
     grid-template-columns: auto;
     grid-gap: 1.5rem;
-    height: 220px;
     margin-bottom: 25px;
   }
 

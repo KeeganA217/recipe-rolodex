@@ -15,8 +15,9 @@ const Recipes = () => {
     if (recipes.length === 0) {
       return (
         <div className="alternate">
+          <h3>Welcome to The Recipe Rolodex!</h3>
           <i className="fas fa-glasses"></i>
-          <h3>Please search for an ingredient or recipe to get started...</h3>
+          <h4>Please search for an ingredient or recipe to get started...</h4>
         </div>
       );
     } else {
