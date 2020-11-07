@@ -27,6 +27,7 @@ const Search = () => {
           className="search mx-auto form-control"
           onChange={onChange}
           required
+          autoComplete="off"
         />
         <input
           type="submit"
