@@ -2,7 +2,7 @@
   "name": "recipe-rolodex",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://KeeganA217.github.io/recipe-rolodex",
+  "homepage": "https://keegana217.github.io/recipe-rolodex",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
