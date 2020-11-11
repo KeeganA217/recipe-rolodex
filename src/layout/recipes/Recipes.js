@@ -8,7 +8,6 @@ const Recipes = () => {
   const recipeContext = useContext(RecipeContext);
 
   const { recipes, loading } = recipeContext;
-
   if (loading) {
     return <Spinner />;
   } else {
