@@ -17,32 +17,45 @@ const Search = () => {
   };
 
   return (
-    <div>
-      <form action="" className="form" onSubmit={onSubmit}>
-        <input
-          type="text"
-          name="text"
-          value={text}
-          placeholder="Find A Recipe..."
-          className="search mx-auto form-control"
-          onChange={onChange}
-          required
-          autoComplete="off"
-        />
-        <input
-          type="submit"
-          value="Search Recipes"
-          className="btn btn-block mt-3 submit"
-        />
-      </form>
-      {recipes.length > 0 && (
-        <button
-          className="btn btn-block clear mb-5 mt-3"
-          onClick={clearRecipes}
-        >
-          Clear Recipes
-        </button>
-      )}
+    <div className="container">
+      <div className="row">
+        <div className="col s12 l10 offset-l1">
+          <div className="input-field">
+            <i className="material-icons prefix">search</i>
+            <input
+              id="icon-prefix search"
+              type="search"
+              value={text}
+              onChange={onChange}
+              required
+              autoComplete="off"
+            />
+            <label className="" htmlFor="search">
+              Search for a recipe here...
+            </label>
+            <i className="material-icons">close</i>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col s12 l8 offset-l2 search-row">
+          {text !== "" && (
+            <button className="btn" onClick={onSubmit}>
+              Search
+            </button>
+          )}
+        </div>
+        <div className="col s12 l8 offset-l2">
+          {recipes.length > 0 && (
+            <button
+              className="btn amber accent-2 black-text"
+              onClick={clearRecipes}
+            >
+              Clear Recipes
+            </button>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

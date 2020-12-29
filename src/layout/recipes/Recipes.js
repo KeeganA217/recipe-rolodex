@@ -13,26 +13,37 @@ const Recipes = () => {
   } else {
     if (recipes.length === 0) {
       return (
-        <div className="alternate">
-          <h3>Welcome to The Recipe Rolodex!</h3>
-          <i className="fas fa-glasses"></i>
-          <h4>Please search for an ingredient or recipe to get started...</h4>
+        <div className="row">
+          <div className="col s12 l8 offset-l2 ">
+            <div className="card z-depth-2 grey lighten-5 opening-card">
+              <div className="card-content black-text">
+                <span className="card-title center-align">
+                  <h4>Welcome to The Recipe Rolodex!</h4>
+                </span>
+                <h5 className="center">
+                  Please search for an ingredient or recipe to get started...
+                </h5>
+              </div>
+            </div>
+          </div>
         </div>
       );
     } else {
       return (
-        <div className="items">
-          {recipes.map((recipe) => (
-            <RecipeItem
-              title={recipe.recipe.label}
-              image={recipe.recipe.image}
-              calories={Math.floor(recipe.recipe.calories)}
-              ingredients={recipe.recipe.ingredientLines}
-              link={recipe.recipe.url}
-              risks={recipe.recipe.healthLabels}
-              key={uuid()}
-            />
-          ))}
+        <div className="container">
+          <div className="row items">
+            {recipes.map((recipe) => (
+              <RecipeItem
+                title={recipe.recipe.label}
+                image={recipe.recipe.image}
+                calories={Math.floor(recipe.recipe.calories)}
+                ingredients={recipe.recipe.ingredientLines}
+                link={recipe.recipe.url}
+                risks={recipe.recipe.healthLabels}
+                key={uuid()}
+              />
+            ))}
+          </div>
         </div>
       );
     }
