@@ -1,0 +1,16 @@
+This project is an example of a frontend application written in
+React.js, using Axios to make http requests to connect to the Edamam
+food database API. Upon searching for a recipe or ingredient, the
+API returns the top ten results. Using Materialize CSS, the
+information is then neatly displayed inside of the UI for the user
+to interact with. State is also managed with the Context API and
+this app utilizes react hooks throughout.
+
+
+
+
+Some of the dependencies: 
+
+-Materialize CSS
+-uuid for generating unique id's
+-axios
